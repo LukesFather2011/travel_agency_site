@@ -226,19 +226,24 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero__agency-name {
-  font-family: var(--font-display);
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: clamp(3.8rem, 10vw, 8rem);
-  font-weight: 300;
+  font-weight: 300 !important;
+  font-style: normal;
   line-height: 1.0;
-  color: var(--white);
+  color: #ffffff !important;
   margin-bottom: 1.25rem;
   animation: fadeUp 1s 0.3s ease both;
   text-shadow: 0 4px 30px rgba(0,0,0,0.4);
   letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .hero__agency-name em {
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
-  color: var(--sun-lt);
+  font-weight: 300 !important;
+  color: #f5c842 !important;
   display: inline-block;
 }
 

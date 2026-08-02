@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sand Sea n Sun Travel</title>
+  <meta name="description" content="Sand Sea n Sun Travel – Your personal travel agency for unforgettable vacations. Cruises, resorts, all-inclusives & more. Get a free quote today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">Sand Sea <span>&amp;</span> Sun</div>
+    <button class="nav__cta" onclick="scrollToQuote()">Get a Free Quote</button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="home">
+    <div class="hero__bg">
+      <div class="hero__overlay"></div>
+      <div class="hero__gradient"></div>
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">Your Personal Travel Agency</p>
+      <h1 class="hero__title">
+        Where Will the<br />
+        <em>Ocean</em> Take You?
+      </h1>
+      <p class="hero__sub">
+        Cruises · All-Inclusives · Resorts · Custom Getaways<br />
+        Hand-crafted vacations at no extra cost to you.
+      </p>
+      <div class="hero__actions">
+        <button class="btn btn--primary" onclick="scrollToQuote()">Plan My Trip</button>
+        <button class="btn btn--ghost" onclick="scrollTo('about')">Learn More</button>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span></span>
+      <p>Scroll</p>
+    </div>
+
+    <!-- Floating destination badges -->
+    <div class="hero__badge hero__badge--1">🌴 Caribbean</div>
+    <div class="hero__badge hero__badge--2">🚢 Cruises</div>
+    <div class="hero__badge hero__badge--3">🏝 All-Inclusive</div>
+  </header>
+
+  <!-- ===== WHY US ===== -->
+  <section class="why" id="about">
+    <div class="why__inner container">
+      <div class="why__text">
+        <span class="section-label">About Us</span>
+        <h2 class="section-title">Travel Made<br /><em>Effortlessly</em> Personal</h2>
+        <p class="why__body">
+          Sand Sea n Sun Travel is your dedicated personal travel consultant — handling every detail
+          so you can focus on the memories. From the moment you reach out to the moment you return
+          home, we're with you every step of the way.
+        </p>
+        <p class="why__body">
+          Best of all? Our service costs you <strong>nothing extra.</strong> We're paid by the
+          suppliers, meaning you get expert planning and exclusive deals at no added fee.
+        </p>
+        <button class="btn btn--primary" onclick="scrollToQuote()">Start Planning</button>
+      </div>
+
+      <div class="why__cards">
+        <div class="why__card">
+          <div class="why__icon">✈️</div>
+          <h3>Full-Service Planning</h3>
+          <p>Flights, hotels, excursions, transfers — we coordinate everything so you travel stress-free.</p>
+        </div>
+        <div class="why__card">
+          <div class="why__icon">💰</div>
+          <h3>No Agent Fees</h3>
+          <p>Our expertise is completely free to you. We earn from suppliers, never from your pocket.</p>
+        </div>
+        <div class="why__card">
+          <div class="why__icon">🤝</div>
+          <h3>Personal Touch</h3>
+          <p>You work directly with your agent — not a call center. Real relationships, real results.</p>
+        </div>
+        <div class="why__card">
+          <div class="why__icon">🏆</div>
+          <h3>Exclusive Deals</h3>
+          <p>Access to supplier discounts, group rates, and promotions not available to the public.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DESTINATIONS ===== -->
+  <section class="destinations" id="destinations">
+    <div class="container">
+      <span class="section-label">Popular Trips</span>
+      <h2 class="section-title">Dream Destinations<br />We <em>Specialize</em> In</h2>
+    </div>
+
+    <div class="dest__strip">
+      <div class="dest__card" style="--bg: url('assets/caribbean.jpg'), linear-gradient(135deg, #006994, #00b4d8)">
+        <div class="dest__card-inner">
+          <h3>Caribbean</h3>
+          <p>Crystal waters, white sand, and endless sunshine await.</p>
+        </div>
+      </div>
+      <div class="dest__card" style="--bg: url('assets/cruise.jpg'), linear-gradient(135deg, #1a1a2e, #16213e)">
+        <div class="dest__card-inner">
+          <h3>Cruise Vacations</h3>
+          <p>Set sail on world-class cruise lines to breathtaking ports.</p>
+        </div>
+      </div>
+      <div class="dest__card" style="--bg: url('assets/allinclusive.jpg'), linear-gradient(135deg, #c9a227, #8b5e3c)">
+        <div class="dest__card-inner">
+          <h3>All-Inclusive Resorts</h3>
+          <p>Unlimited food, drinks, and fun — one price, zero worries.</p>
+        </div>
+      </div>
+      <div class="dest__card" style="--bg: url('assets/honeymoon.jpg'), linear-gradient(135deg, #c94b4b, #4b134f)">
+        <div class="dest__card-inner">
+          <h3>Romantic Getaways</h3>
+          <p>Honeymoons, anniversaries, and couples escapes done right.</p>
+        </div>
+      </div>
+      <div class="dest__card" style="--bg: url('assets/group.jpg'), linear-gradient(135deg, #11998e, #38ef7d)">
+        <div class="dest__card-inner">
+          <h3>Group Travel</h3>
+          <p>Family reunions, friend trips, and corporate retreats.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how" id="how">
+    <div class="container">
+      <span class="section-label">The Process</span>
+      <h2 class="section-title">Planning Your Trip is<br /><em>Simple</em></h2>
+
+      <div class="how__steps">
+        <div class="how__step">
+          <div class="how__num">01</div>
+          <h3>Submit a Quote Request</h3>
+          <p>Fill out our quick form below with your travel details, dates, and preferences.</p>
+        </div>
+        <div class="how__arrow">→</div>
+        <div class="how__step">
+          <div class="how__num">02</div>
+          <h3>We Get in Touch</h3>
+          <p>Your agent reaches out within 2–3 business days to discuss options and build your itinerary.</p>
+        </div>
+        <div class="how__arrow">→</div>
+        <div class="how__step">
+          <div class="how__num">03</div>
+          <h3>Pack Your Bags</h3>
+          <p>We handle all the bookings. All you have to do is show up and enjoy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUOTE FORM ===== -->
+  <section class="quote" id="quote">
+    <div class="quote__bg"></div>
+    <div class="container quote__inner">
+      <div class="quote__text">
+        <span class="section-label light">Free Quote</span>
+        <h2 class="section-title light">Ready to Start<br />Your <em>Adventure?</em></h2>
+        <p class="quote__sub">
+          Fill out the form and we'll contact you within 2–3 business days to start planning
+          the vacation of your dreams — at no cost to you.
+        </p>
+        <div class="quote__icons">
+          <div class="qi"><span>🌊</span><p>Beaches</p></div>
+          <div class="qi"><span>🚢</span><p>Cruises</p></div>
+          <div class="qi"><span>🏨</span><p>Resorts</p></div>
+          <div class="qi"><span>🌍</span><p>International</p></div>
+        </div>
+      </div>
+
+      <div class="quote__embed">
+        <div class="quote__frame-wrap">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdyFVDlf_XQVaeyWZNc0JeXJs29htEuYChuDD1-AxcODfEzzA/viewform?embedded=true"
+            width="100%"
+            height="780"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Travel Quote Request Form"
+          >Loading…</iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">Sand Sea <span>&amp;</span> Sun Travel</p>
+        <p class="footer__tagline">Your personal travel consultant.<br />Planning the trip you deserve.</p>
+      </div>
+
+      <div class="footer__links">
+        <a href="#home" onclick="smoothNav(event,'home')">Home</a>
+        <a href="#about" onclick="smoothNav(event,'about')">About</a>
+        <a href="#destinations" onclick="smoothNav(event,'destinations')">Destinations</a>
+        <a href="#quote" onclick="smoothNav(event,'quote')">Get a Quote</a>
+        <a href="https://www.facebook.com/share/14jbXyPwXzj/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+
+      <div class="footer__contact">
+        <p>📘 <a href="https://www.facebook.com/share/14jbXyPwXzj/" target="_blank" rel="noopener">Find us on Facebook</a></p>
+        <p>Response within 2–3 business days</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> Sand Sea n Sun Travel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

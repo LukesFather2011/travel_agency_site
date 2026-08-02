@@ -68,6 +68,30 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// ---- Count-up animation for stats ----
+const countEls = document.querySelectorAll('.stats__num[data-target]');
+const countObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = parseInt(el.dataset.target, 10);
+    const duration = 1800;
+    const start = performance.now();
+    const tick = (now) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target);
+      if (progress < 1) requestAnimationFrame(tick);
+      else el.textContent = target;
+    };
+    requestAnimationFrame(tick);
+    countObserver.unobserve(el);
+  });
+}, { threshold: 0.5 });
+countEls.forEach(el => countObserver.observe(el));
+
 // ---- Destination strip: drag-to-scroll on desktop ----
 const strip = document.querySelector('.dest__strip');
 if (strip) {

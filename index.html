@@ -27,9 +27,8 @@
 
     <div class="hero__content">
       <p class="hero__eyebrow">Your Personal Travel Agency</p>
-      <h1 class="hero__title">
-        Where Will the<br />
-        <em>Ocean</em> Take You?
+      <h1 class="hero__agency-name">
+        Sand Sea<br /><em>n' Sun</em><br />Travel
       </h1>
       <p class="hero__sub">
         Cruises · All-Inclusives · Resorts · Custom Getaways<br />
@@ -37,7 +36,7 @@
       </p>
       <div class="hero__actions">
         <button class="btn btn--primary" onclick="scrollToQuote()">Plan My Trip</button>
-        <button class="btn btn--ghost" onclick="scrollTo('about')">Learn More</button>
+        <button class="btn btn--ghost" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Learn More</button>
       </div>
     </div>
 
@@ -51,6 +50,74 @@
     <div class="hero__badge hero__badge--2">🚢 Cruises</div>
     <div class="hero__badge hero__badge--3">🏝 All-Inclusive</div>
   </header>
+
+  <!-- ===== AGENT INTRO ===== -->
+  <section class="agent" id="agent">
+    <div class="agent__inner container">
+      <div class="agent__photo-wrap">
+        <div class="agent__photo">
+          <!-- Replace assets/dad.jpg with a real photo of your father -->
+          <img src="assets/dad.jpg" alt="Your travel agent" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="agent__photo-placeholder">
+            <span>🌴</span>
+            <p>Add a photo of<br />your agent here</p>
+            <small>assets/dad.jpg</small>
+          </div>
+        </div>
+        <div class="agent__badge-wrap">
+          <div class="agent__stat">
+            <strong>Personal</strong>
+            <span>Service</span>
+          </div>
+          <div class="agent__stat">
+            <strong>Free</strong>
+            <span>To You</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="agent__text">
+        <span class="section-label">Meet Your Agent</span>
+        <h2 class="section-title">A Friendly Face<br />Behind Every <em>Trip</em></h2>
+        <p class="agent__body">
+          Sand Sea n Sun Travel is a personal travel agency built on relationships,
+          not reservations. When you reach out, you're not getting a call center —
+          you're getting a dedicated travel consultant who genuinely cares about
+          making your vacation unforgettable.
+        </p>
+        <p class="agent__body">
+          From Caribbean cruises to all-inclusive resorts, every trip is crafted
+          with personal attention to your budget, your timeline, and your style.
+          And the best part? <strong>It costs you nothing extra.</strong>
+        </p>
+        <button class="btn btn--primary" onclick="scrollToQuote()">Let's Plan Your Trip</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS BANNER ===== -->
+  <section class="stats">
+    <div class="stats__inner container">
+      <div class="stats__item">
+        <p class="stats__num" data-target="250">0</p>
+        <p class="stats__label">Passports Stamped &amp; Counting</p>
+        <p class="stats__sub">Vacations planned and delivered — each one personal, each one unforgettable.</p>
+      </div>
+      <div class="stats__divider"></div>
+      <div class="stats__item">
+        <p class="stats__word">Zero</p>
+        <p class="stats__label">Hidden Fees. Ever.</p>
+        <p class="stats__sub">Expert planning that never costs you a dime more than your trip itself.</p>
+      </div>
+      <div class="stats__divider"></div>
+      <div class="stats__item">
+        <p class="stats__word">One</p>
+        <p class="stats__label">Agent. Your Agent.</p>
+        <p class="stats__sub">No call centers, no strangers — just a familiar face in your corner.</p>
+      </div>
+    </div>
+    <p class="stats__note">* Update the traveler count in <code>index.html</code> — search for <code>data-target</code></p>
+  </section>
 
   <!-- ===== WHY US ===== -->
   <section class="why" id="about">

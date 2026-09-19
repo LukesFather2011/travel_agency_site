@@ -120,3 +120,20 @@ if (strip) {
   });
   strip.style.cursor = 'grab';
 }
+
+// -- email dad when google form is submitted --
+function onFormSubmit(e) {
+  var responses = e.response.getItemResponses();
+
+  var message = "🌴 New Quote Request!\n\n";
+  responses.forEach(function(r) {
+    message += r.getItem().getTitle() + ": " + r.getResponse() + "\n";
+  });
+
+  // Email notification
+  MailApp.sendEmail(
+    "msquirestravel@gmail.com",
+    "New Trip Request - Sand Sea n Sun Travel",
+    message
+  );
+}
